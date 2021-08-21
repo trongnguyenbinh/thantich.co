@@ -100,19 +100,8 @@
   );
 }
 
-@font-face {
-  font-family: "Agency Fb";
-  src: url("../fonts/agency/agency-fb.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
 .font-roboto {
   font-family: "Roboto", sans-serif;
-}
-
-.font-agency {
-  font-family: "Agency FB";
 }
 
 .italic {
@@ -232,7 +221,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Agency FB";
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
@@ -241,7 +229,6 @@ h6 {
 }
 
 .subheading {
-  font-family: "Agency FB";
   font-size: 20px;
 }
 
@@ -730,13 +717,10 @@ img {
 }
 .title-bl .title {
   position: relative;
-  font-family: "Agency FB";
   font-size: 40px;
   font-weight: 700;
   text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
   text-transform: uppercase;
-  /* padding-top: 25px;
-		padding-bottom: 25px; */
 }
 .title-bl .subtitle {
   position: absolute;
@@ -748,7 +732,6 @@ img {
   opacity: 0.02;
   text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
   color: #c2d4f8;
-  font-family: "Agency FB";
   font-size: 88px;
   font-weight: 700;
   text-transform: uppercase;
@@ -756,7 +739,6 @@ img {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* line-height: 100%; */
 }
 
 .title-description {
@@ -799,7 +781,6 @@ img {
 }
 .page-name .page-title {
   color: #fff;
-  font-family: "Agency FB";
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2022,7 +2003,6 @@ header .right-bl .search-content button {
   text-transform: uppercase;
 }
 .tm-tabs .nav-tabs li a .nav-header-bl .nav-title {
-  font-family: "Agency FB";
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
@@ -2156,7 +2136,6 @@ header .right-bl .search-content button {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  font-family: "Agency FB";
   text-transform: uppercase;
   line-height: 28px;
   transition: all 0.3s ease-out;
@@ -2468,7 +2447,6 @@ header .right-bl .search-content button {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  font-family: "Agency FB";
   text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
 }
 .st-tabs .tab-content .video-bl .video-bottom .stream-img {
@@ -2641,7 +2619,6 @@ header .right-bl .search-content button {
   width: 100px;
   height: 100px;
   line-height: 100px;
-  font-family: "Agency FB";
   background-image: linear-gradient(
     to right,
     #3dd0d8 0%,
@@ -2690,7 +2667,6 @@ header .right-bl .search-content button {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Agency FB";
   color: #fff;
 }
 
@@ -2705,7 +2681,6 @@ header .right-bl .search-content button {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Agency FB";
   color: #fff;
 }
 
@@ -2863,7 +2838,6 @@ footer.footer .copyright {
    ========================================================================== */
 .s_title {
   opacity: 0.25;
-  font-family: "Agency FB";
   font-size: 56px;
   font-weight: 400;
   line-height: 25px;
@@ -2872,7 +2846,6 @@ footer.footer .copyright {
 
 .s_subtitle {
   color: #fff;
-  font-family: "Agency FB";
   font-size: 32px;
   font-weight: 700;
   line-height: 30px;
@@ -3817,15 +3790,6 @@ footer.footer .copyright {
   width: 50px;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
-.blog-content
-  .calendar-bl
-  .date-picker-wrapper
-  .month-wrapper
-  table
-  .caption
-  .month-element {
-  font-family: "Agency FB";
-}
 .blog-content .calendar-bl .date-picker-wrapper .month-wrapper .month1 {
   width: 100%;
   border-radius: 10px;
@@ -4157,7 +4121,6 @@ footer.footer .copyright {
 }
 .post-commet-bl .author-url {
   color: #fff;
-  font-family: "Agency FB";
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
