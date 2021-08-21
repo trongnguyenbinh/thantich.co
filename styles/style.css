@@ -326,7 +326,7 @@ img {
 }
 
 .color-white {
-  color: #fff;
+  color: #c4adee;
 }
 
 .color-whitei {
@@ -825,6 +825,11 @@ img {
   text-transform: uppercase;
   color: #3dd0d8;
   padding: 0 12.5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ul.list-1 {
@@ -1453,10 +1458,10 @@ body .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #c2d4f8;
+  color: #fff;
   background-color: #1e1d32;
 }
 body .loader-wrapper {
@@ -1483,6 +1488,31 @@ body.no-scroll {
   z-index: 9999999999;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
+
 /* ==========================================================================
    02. HEADER STYLES
    ========================================================================== */
@@ -1496,11 +1526,10 @@ body.no-scroll {
   height: 100px;
   transition: all 0.3s ease-out;
 }
-.header-line-wrapper.affix-top header .logo img {
-  max-width: 55%;
-}
+
 .header-line-wrapper.affix-top header .main-menu .menu > li {
-  line-height: 100px;
+  line-height: 1;
+  padding: 18px;
 }
 .header-line-wrapper.affix-top header .right-bl .search-wrapper {
   line-height: 100px;
@@ -1511,10 +1540,47 @@ body.no-scroll {
   z-index: 150;
   transition: all 0.3s ease-out;
 }
+/* LOGO */
+.logo {
+  height: 132px;
+  display: block;
+  transition: height 0.2s ease-out;
+}
+
+.logo img {
+  height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo {
+    height: 120px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .logo {
+    height: 8 0px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    height: 60px;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .logo {
+    height: 48px;
+    display: block;
+  }
+}
+/* END LOGO */
 
 header {
-  background-color: rgba(24, 23, 40, 0.8);
-  box-shadow: 3.5px 6.1px 30px rgba(0, 0, 0, 0.57);
   height: 140px;
 }
 header.header-wrapper {
@@ -1638,13 +1704,14 @@ header .main-menu .menu .flexMenu-viewMore .flexMenu-popup li a {
   transition: all 0.3s ease-out;
 }
 header .main-menu .menu .flexMenu-viewMore .flexMenu-popup li a:hover {
-  color: #3dd0d8;
+  color: #ffc904;
   transition: all 0.3s ease-out;
 }
 header .main-menu .menu > li {
-  line-height: 140px;
+  line-height: 1px;
   float: left;
   margin: 0 30px;
+  padding: 18px;
   position: relative;
 }
 header .main-menu .menu > li:first-child {
@@ -1717,9 +1784,8 @@ header .main-menu .menu > li a {
   height: 100%;
   text-transform: uppercase;
   color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  font-family: "American Captain";
+  font-size: 25px;
   transition: all 0.3s ease-out;
 }
 header .right-bl .search-wrapper {
@@ -1806,11 +1872,63 @@ header .right-bl .search-content button {
   );
 }
 
-.main-slider .n2-active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  transition: all 0.3s ease-out;
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
 }
+
+/* MAIN SLIDER */
+
+.main-slider {
+  height: 1080px;
+  width: 100%;
+  position: relative;
+  transition: all 0.2s ease-out;
+}
+
+.main-slider .main-slider-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/thantich.png");
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-slider {
+    height: 1000px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-slider {
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-slider {
+    height: 680px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .main-slider {
+    height: 400px;
+  }
+  .main-slider .main-slider-bg {
+    background-size: cover;
+    background-image: url("../images/thantich_mobile.png");
+  }
+}
+
+/* END MAIN SLIDER */
 
 /* ==========================================================================
    03. GAME SECTION
@@ -1883,7 +2001,7 @@ header .right-bl .search-content button {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 .tm-tabs .nav-tabs li a .img-wrap:after {
   content: "";
@@ -1957,6 +2075,12 @@ header .right-bl .search-content button {
 
 .img-wrap:hover ~ .nav-header-bl {
   margin-top: 65px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tm-tabs .tab-content .game-full-img {
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
@@ -2213,11 +2337,38 @@ header .right-bl .search-content button {
 /* ==========================================================================
    07. STREAM SECTION
    ========================================================================== */
+
+.container-tabs {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-tabs .tab-item {
+  display: block;
+  padding: 10px;
+  border: 1px solid #c4adee;
+  width: 170px;
+  text-align: center;
+}
+
+.container-tabs .tab-item:hover,
+.container-tabs .tab-item.active {
+  background-color: #6c5d88;
+  color: #9885bb;
+}
+
+.container-tabs .tab-item .tab-title {
+  font-family: "Alumni Sans", sans-serif;
+}
+
 .st-tabs .tab-title {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
+  color: #c4adee;
+  font-size: 20px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .st-tabs .nav-tabs {
@@ -2364,7 +2515,97 @@ header .right-bl .search-content button {
 /* ==========================================================================
    08. PRICE STYLES
    ========================================================================== */
-.price {
+.timeline-root {
+  display: flex;
+  padding: 6px 16px;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  list-style: none;
+  min-height: 70px;
+}
+
+.timeline-item p {
+  margin-bottom: 5px;
+}
+
+.timeline-item .timeline-content {
+  padding: 24px 0;
+}
+
+@media only screen and (max-width: 599px) {
+  .timeline-item:nth-child(odd) {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .timeline-item:nth-child(even) {
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(odd)::before {
+    content: "";
+    width: 50%;
+  }
+
+  .timeline-item .timeline-content {
+    width: 50%;
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .timeline-item .timeline-content p {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .timeline-item .timeline-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -3px;
+    bottom: 0;
+    width: 6px;
+    background-color: #ffc904;
+  }
+  .timeline-item:nth-child(even) .timeline-content:before {
+    right: -3px;
+    left: unset;
+  }
+}
+
+.timeline-container {
+  padding-top: 50px;
+}
+
+.content-time {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #ff9800;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.timeline-root .price {
   background: #181728;
 }
 .price .item {
@@ -2584,6 +2825,37 @@ footer.footer .footer-menu > li.active a {
 }
 footer.footer .copyright {
   border-top: 1px solid rgba(194, 212, 248, 0.4);
+}
+
+.footer-title {
+  font-family: "American Captain";
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-block {
+  width: 32%;
+  min-width: 160px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 23px;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ffc904;
 }
 
 /* ==========================================================================
