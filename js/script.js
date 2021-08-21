@@ -142,7 +142,7 @@
     $("#game-cards").slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-			autoplay: true,
+      autoplay: true,
       arrows: true,
       prevArrow: '<i class="fa fa-angle-left slick-arrow"></i>',
       nextArrow: '<i class="fa fa-angle-right slick-arrow"></i>',
@@ -178,7 +178,7 @@
   if (isMobile()) {
     $("#choose-your-hero").slick({
       slidesToShow: 1,
-			autoplay: true,
+      autoplay: true,
     });
   }
 
@@ -190,6 +190,11 @@
     if ($(this).hasClass("active")) {
       $(".tabs-slider li").removeClass("active");
     }
+  });
+
+  $(".container-tabs .tab-item").on("click", function () {
+    $(".container-tabs .tab-item").removeClass("active");
+    $(this).addClass("active");
   });
 
   /**
@@ -273,10 +278,11 @@
   /* LightBox Initialize
 	/*----------------------------------------------------*/
 
-  lightbox.option({
-    showImageNumberLabel: false,
-    disableScrolling: true,
-  });
+  //TODO: remove
+  // lightbox.option({
+  //   showImageNumberLabel: false,
+  //   disableScrolling: true,
+  // });
 
   /*----------------------------------------------------*/
   /*	Trimming

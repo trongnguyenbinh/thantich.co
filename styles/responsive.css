@@ -253,7 +253,8 @@
   }
   /* Game section */
   .tm-tabs .tab-content .tab-info {
-    padding: 60px;
+    padding: 30px;
+    text-align: center;
   }
   .tm-tabs .tab-content .image-bl .game-full-img {
     height: auto;
@@ -268,7 +269,7 @@
   }
 
   .tm-tabs .tab-content .tab-img {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 
@@ -285,13 +286,9 @@
     margin-top: 10px;
   }
 
-  /* .tm-tabs .tab-content .game-full-img {
-    height: 100%;
+  .main-gallery {
+    padding-bottom: 0 !important;
   }
-
-  .tm-tabs .tab-content .tab-img {
-    padding: 0 50px;
-  } */
 }
 
 @media screen and (max-width: 480px) {
