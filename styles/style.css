@@ -1505,6 +1505,7 @@ body.no-scroll {
 .header-line-wrapper.affix-top header {
   background-color: #1e1d32;
   height: 100px;
+  padding: 0 50px;
   transition: all 0.3s ease-out;
 }
 
@@ -1562,8 +1563,9 @@ body.no-scroll {
 /* END LOGO */
 
 header {
-  height: 140px;
+  height: 25px;
 }
+
 header.header-wrapper {
   position: absolute;
   top: 0;
@@ -1863,7 +1865,7 @@ header .right-bl .search-content button {
 /* MAIN SLIDER */
 
 .main-slider {
-  height: 1080px;
+  height: 870px;
   width: 100%;
   position: relative;
   transition: all 0.2s ease-out;
@@ -1875,10 +1877,10 @@ header .right-bl .search-content button {
   height: 100%;
   left: 0;
   width: 100%;
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("../images/thantich.png");
+}
+
+.main-slider .main-slider-bg video {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1901,11 +1903,7 @@ header .right-bl .search-content button {
 
 @media only screen and (max-width: 576px) {
   .main-slider {
-    height: 400px;
-  }
-  .main-slider .main-slider-bg {
-    background-size: cover;
-    background-image: url("../images/thantich_mobile.png");
+    height: 150px;
   }
 }
 
