@@ -252,6 +252,9 @@
     right: 10px;
   }
   /* Game section */
+  .tm-tabs .tab-content {
+    height: 450px;
+  }
   .tm-tabs .tab-content .tab-info {
     padding: 30px;
     text-align: center;
@@ -288,6 +291,15 @@
 
   .main-gallery {
     padding-bottom: 0 !important;
+  }
+
+  .header-line-wrapper .logo {
+    padding: 0;
+  }
+
+  .header-line-wrapper.affix-top header {
+    height: 60px;
+    padding: 0 30px;
   }
 }
 

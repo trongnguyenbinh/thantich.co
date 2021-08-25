@@ -10,8 +10,9 @@
   winObj.on("load", function () {
     var $preloader = $(".loader-wrapper");
 
+    $preloader.hide();
     $preloader.find(".cssload-loader").fadeOut();
-    $preloader.delay(350).fadeOut("slow");
+    $preloader.delay(500).fadeOut("slow");
   });
 
   /*----------------------------------------------------*/
@@ -176,11 +177,16 @@
   }
 
   if (isMobile()) {
-    $("#choose-your-hero").slick({
+    $("#choose-your-pantheon").slick({
       slidesToShow: 1,
       autoplay: true,
     });
   }
+
+  $("#features").slick({
+    slidesToShow: 5,
+    draggable: false
+  });
 
   /**
    * TODO: will remove later
@@ -204,20 +210,19 @@
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: true,
-    infinite: true,
-    dots: true,
+    // arrows: true,
+    // dots: true,
     prevArrow: '<i class="fa fa-angle-left slick-arrow"></i>',
     nextArrow: '<i class="fa fa-angle-right slick-arrow"></i>',
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    // adaptiveHeight: true,
+    // responsive: [
+    //   {
+    //     breakpoint: 992,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     },
+    //   },
+    // ],
   });
   /**
    * TODO: will remove later
@@ -480,6 +485,23 @@
       });
     });
   }
+
+  function initFeatures(option) {
+    $("#poseidons .tab-pane").hide();
+    $("#poseidons .tab-pane" + option.initItem).show();
+    $("#poseidon .container-tabs .tab-item[data-tab-content='#poseidon-1']").addClass("active");
+    $("#poseidon .container-tabs .tab-item").click(function () {
+      $("#poseidon .container-tabs .tab-item").removeClass("active");
+      $("#poseidons .tab-pane").hide();
+      $(this).addClass("active");
+      var id = $(this).attr("data-tab-content");
+      $("#poseidons .tab-pane" + id).show();
+    });
+  }
+
+  initFeatures({
+    initItem: "#poseidon-1",
+  });
 
   /*----------------------------------------------------*/
   /* Calendar Settings

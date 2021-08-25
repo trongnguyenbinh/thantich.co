@@ -313,7 +313,7 @@ img {
 }
 
 .color-white {
-  color: #c4adee;
+  color: #fff;
 }
 
 .color-whitei {
@@ -510,6 +510,10 @@ img {
   padding-top: 25px;
 }
 
+.pt70 {
+  padding-top: 70px;
+}
+
 .pt85 {
   padding-top: 85px;
 }
@@ -647,6 +651,11 @@ img {
   margin-bottom: 110px;
 }
 
+.mtb85 {
+  margin-top: 85px;
+  margin-bottom: 85px;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -716,6 +725,7 @@ img {
   z-index: 3;
 }
 .title-bl .title {
+  font-family: "Albertus Nova", sans-serif;
   position: relative;
   font-size: 40px;
   font-weight: 700;
@@ -723,7 +733,7 @@ img {
   text-transform: uppercase;
 }
 .title-bl .subtitle {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   z-index: 10;
@@ -738,7 +748,12 @@ img {
   white-space: nowrap;
   width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+  color: #c4adee;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .title-description {
@@ -1509,6 +1524,10 @@ body.no-scroll {
   transition: all 0.3s ease-out;
 }
 
+.header-line-wrapper .logo {
+  padding-left: 80px;
+}
+
 .header-line-wrapper.affix-top header .main-menu .menu > li {
   line-height: 1;
   padding: 18px;
@@ -1865,7 +1884,7 @@ header .right-bl .search-content button {
 /* MAIN SLIDER */
 
 .main-slider {
-  height: 870px;
+  height: 1080px;
   width: 100%;
   position: relative;
   transition: all 0.2s ease-out;
@@ -2009,6 +2028,7 @@ header .right-bl .search-content button {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.3s ease-out;
+  color: #3dd0d8;
 }
 .tm-tabs .nav-tabs li a .nav-header-bl .nav-title:hover {
   color: #3dd0d8;
@@ -2066,7 +2086,9 @@ header .right-bl .search-content button {
    ========================================================================== */
 .blog-section {
   position: relative;
+  background-image: url("../images/feature_bg.png");
 }
+
 .blog-section .bg-wrapper {
   position: relative;
 }
@@ -2099,11 +2121,6 @@ header .right-bl .search-content button {
   bottom: 0;
   opacity: 0;
   visibility: hidden;
-  background: linear-gradient(
-    to right,
-    #3dd0d8 0%,
-    rgba(124, 105, 227, 0.64) 100%
-  );
   transition: all 0.3s ease-out;
 }
 .blog-section .item-wrap:hover .image:after {
@@ -2158,11 +2175,30 @@ header .right-bl .search-content button {
    05. TESTIMONIAL SECTION
    ========================================================================== */
 .testimonial-tpl .slide-item {
-  background-color: #181728;
   border-radius: 10px;
-  padding: 100px 70px 70px 70px;
+  padding: 100px 30px 70px 30px;
   position: relative;
 }
+
+.testimonial-slider {
+  height: 450px;
+}
+
+.testimonial-slider .slick-list {
+  height: 100%;
+}
+
+.testimonial-tpl .slide-item .name-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.testimonial-tpl .slide-item .name-info .fullname {
+  color: #7c69e3;
+  font-weight: 600;
+}
+
 .testimonial-tpl .slide-item .author-img {
   border-radius: 50%;
   overflow: hidden;
@@ -2321,6 +2357,7 @@ header .right-bl .search-content button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .container-tabs .tab-item {
@@ -2331,12 +2368,45 @@ header .right-bl .search-content button {
   text-align: center;
 }
 
+.container-tabs .tab-item .tab-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-tabs .tab-item .tab-title img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.container-tabs .tab-item .tab-title span {
+  color: #4c4656;
+}
+
 .container-tabs .tab-item:hover,
 .container-tabs .tab-item.active {
   background-color: #6c5d88;
-  color: #9885bb;
 }
 
+.container-tabs .tab-item.active .tab-title span {
+  color: #fff;
+}
+
+#poseidon .container-tabs .tab-item:hover {
+  cursor: pointer;
+}
+
+#how-to-earn {
+  background-image: url("../images/play&earn_bg.png");
+}
+
+.earn-item-content {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
+}
 .container-tabs .tab-item .tab-title {
   font-family: "Alumni Sans", sans-serif;
 }
@@ -2487,6 +2557,96 @@ header .right-bl .search-content button {
 .st-tabs .tab-content .item-g .img-com img {
   border-radius: 50%;
 }
+
+#poseidon .tab-content .tab-pane {
+  display: flex;
+  align-items: center;
+}
+
+#poseidon .tab-content .tab-pane .poseidon-content {
+  width: 40%;
+}
+
+#poseidon .tab-content .tab-pane .poseido-image {
+  flex-grow: 1;
+}
+
+.poseidon-content .skill-item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.poseidon-content .skill-item img {
+  width: 20%;
+}
+
+/* ==========================================================================
+   08. FEATURE STYLES
+   ========================================================================== */
+
+#features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 800px;
+}
+
+#features-section .bg-wrapper,  #features-section .bg-wrapper .container{
+  height: 100%;
+}
+
+#features-section .tab-content .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#features-section .tab-content .content-item {
+  width: 80%;
+}
+
+#features-section .tab-content .content-item .title {
+  font-family: "American Captain";
+  font-size: 30px;
+}
+
+#features-section .tab-content .img-content {
+  flex-grow: 1;
+}
+
+#features .items {
+  border: 2px solid transparent;
+  height: 84px;
+  width: 84px !important;
+  margin: 0 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0.7;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#features {
+  width: 500px;
+  height: 150px;
+}
+
+.active-feature {
+  border-color: #d24672;
+  opacity: 1;
+}
+
+#features .items img {
+  color: transparent;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+  text-indent: 10000px;
+}
+
+/* ==========================================================================*/
 
 /* ==========================================================================
    08. PRICE STYLES
@@ -3083,6 +3243,10 @@ footer.footer .copyright {
 /* ==========================================================================
    15. TEAM PAGE
    ========================================================================== */
+
+#our-team {
+  background-image: url(../images/ourteam_bg.png);
+}
 .item-content.first .text-container .position {
   color: #00b4d6;
 }
