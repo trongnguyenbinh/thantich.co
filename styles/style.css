@@ -727,28 +727,12 @@ img {
 .title-bl .title {
   font-family: "Albertus Nova", sans-serif;
   position: relative;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
   text-transform: uppercase;
 }
 .title-bl .subtitle {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0.02;
-  text-shadow: 0 2px 4.8px rgba(30, 29, 50, 0.3);
-  color: #c2d4f8;
-  font-size: 88px;
-  font-weight: 700;
-  text-transform: uppercase;
-  white-space: nowrap;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis; */
   color: #c4adee;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
@@ -2176,12 +2160,8 @@ header .right-bl .search-content button {
    ========================================================================== */
 .testimonial-tpl .slide-item {
   border-radius: 10px;
-  padding: 100px 30px 70px 30px;
+  padding: 100px 0 70px 0;
   position: relative;
-}
-
-.testimonial-slider {
-  height: 450px;
 }
 
 .testimonial-slider .slick-list {
@@ -2191,7 +2171,11 @@ header .right-bl .search-content button {
 .testimonial-tpl .slide-item .name-info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.testimonial-tpl .slide-item .descriptions p {
+  margin: 0;
 }
 
 .testimonial-tpl .slide-item .name-info .fullname {
@@ -2203,11 +2187,6 @@ header .right-bl .search-content button {
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 .testimonial-tpl .slide-item .fa-quote-left {
   font-size: 119px;
@@ -2216,11 +2195,6 @@ header .right-bl .search-content button {
   position: absolute;
   right: 5px;
   top: -8px;
-}
-
-.testimonial-tpl .slick-slide {
-  padding-top: 60px;
-  outline: none;
 }
 
 .testimonial-tpl .slick-dots {

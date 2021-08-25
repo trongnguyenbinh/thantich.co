@@ -91,10 +91,7 @@
   .st-tabs .nav-tabs > li a {
     padding: 20px;
   }
-  /* Testimonial section */
-  .testimonial-slider {
-    margin-top: 90px;
-  }
+
   .testimonial-slider .slick-dots {
     bottom: -50px;
   }
@@ -274,6 +271,35 @@
   .tm-tabs .tab-content .tab-img {
     padding: 0 30px;
   }
+
+  .main-slider {
+    height: 400px;
+  }
+
+  #features-section {
+    height: 100%;
+  }
+
+  #poseidon .tab-content .tab-pane {
+    flex-direction: column;
+  }
+
+  #poseidon .tab-content .tab-pane .poseidon-content {
+    width: 100%;
+  }
+
+  .tm-tabs .tab-content {
+    height: 600px;
+  }
+
+  #features-section .bg-wrapper .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .testimonial-slider .slick-list {
+    padding-top: 0;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -315,7 +341,7 @@
   }
   /* Basic styles */
   .title-bl .subtitle {
-    font-size: 60px;
+    font-size: 20px;
   }
   /* Game section */
   .tm-tabs .g-bottom > div {
