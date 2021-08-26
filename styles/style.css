@@ -666,7 +666,6 @@ img {
     #3dd0d8 0%,
     rgba(124, 105, 227, 0.64) 100%
   );
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -3220,6 +3219,10 @@ footer.footer .copyright {
 
 #our-team {
   background-image: url(../images/ourteam_bg.png);
+}
+
+#our-team .author-img img {
+  width: 206px;
 }
 .item-content.first .text-container .position {
   color: #00b4d6;
