@@ -1483,6 +1483,10 @@ body.no-scroll {
   display: none !important;
 }
 
+.relative{
+  position: relative;
+}
+
 @media (min-width: 576px) {
   .d-sm-block {
     display: block !important;
@@ -3226,8 +3230,14 @@ footer.footer .copyright {
   background-image: url(../images/ourteam_bg.png);
 }
 
-#our-team .author-img img {
+#our-team .author-img {
   width: 206px;
+  height: 206px;
+}
+
+#our-team .author-img img {
+  width: 100%;
+  height: 100%;
 }
 .item-content.first .text-container .position {
   color: #00b4d6;
