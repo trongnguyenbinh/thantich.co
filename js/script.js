@@ -35,25 +35,6 @@
   });
 
   /*----------------------------------------------------*/
-  /* DataTables Initialize
-	/*----------------------------------------------------*/
-  var dTables = $(".dTables");
-  if (dTables.length) {
-    dTables.DataTable({
-      responsive: true,
-      info: false,
-      language: {
-        search: "",
-        searchPlaceholder: "Search here...",
-        paginate: {
-          previous: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-          next: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
-        },
-      },
-    });
-  }
-
-  /*----------------------------------------------------*/
   /* FormStyler Modern Initialize
 	/*----------------------------------------------------*/
   var styledControls = $("select");
@@ -324,23 +305,6 @@
   });
 
   /*----------------------------------------------------*/
-  /*	Video Settings
-	/*----------------------------------------------------*/
-  $(".buttonbar").on("click", ".play", function () {
-    var video = $(".stream-bl video"),
-      button = $(".play");
-    if (video[0].paused) {
-      video[0].play();
-      $(this).addClass("pause-show");
-      $(this).removeClass("play-show");
-    } else {
-      video[0].pause();
-      $(this).addClass("play-show");
-      $(this).removeClass("pause-show");
-    }
-  });
-
-  /*----------------------------------------------------*/
   /* Fixed Menu
 	/*----------------------------------------------------*/
   var nav = $(".header-line-wrapper"),
@@ -353,42 +317,6 @@
       nav.removeClass("affix-top");
     }
   });
-
-  winObj.on("load", function () {
-    /*----------------------------------------------------*/
-    /* Muuri Settings
-	/*----------------------------------------------------*/
-
-    $(".gallery").on("click", ".filter_container > div", function () {
-      $(".filter_container > div").removeClass("active");
-      $(this).addClass("active");
-    });
-
-    if ($(".item_container").length) {
-      var itemGrid = new Muuri(".item_container", {
-        showDuration: 200,
-        hideDuration: 100,
-        showEasing: "ease-out",
-        layout: {
-          rounding: false,
-        },
-      });
-
-      $(".filter_container .filter-item").on("click", function () {
-        var filterClass = $(this).data("filter");
-        if (filterClass === "all") {
-          itemGrid.filter(".item");
-        } else {
-          itemGrid.filter("." + filterClass);
-        }
-      });
-    }
-  });
-
-  /*----------------------------------------------------*/
-  /* Parallax Initialize
-	/*----------------------------------------------------*/
-  $(".parallax").paroller();
 
   /*----------------------------------------------------*/
   /*	Progress Bar
@@ -438,39 +366,6 @@
     );
   }
 
-  var mainLine = $(".skills");
-  if (mainLine.length) {
-    mainLine.on("inview", function (event, isInView) {
-      if (isInView) {
-        if (!$(this).hasClass("visible")) {
-          $(this).addClass("visible");
-
-          progressBarCreator(progressline69, 0.69);
-          progressBarCreator(progressline80, 0.8);
-          progressBarCreator(progressline52, 0.52);
-          progressBarCreator(progressline90, 0.9);
-        }
-      }
-    });
-  }
-
-  var gamesChar = $(".game-char");
-  if (gamesChar.length) {
-    gamesChar.on("inview", function (event, isInView) {
-      if (isInView) {
-        if (!$(this).hasClass("visible")) {
-          $(this).addClass("visible");
-
-          progressBarCreator(progressline69, 0.69);
-          progressBarCreator(progressline80, 0.8);
-          progressBarCreator(progressline52, 0.52);
-          progressBarCreator(progressline90, 0.9);
-          progressBarCreator(progressline30, 0.3);
-        }
-      }
-    });
-  }
-
   /*----------------------------------------------------*/
   /*	Add class to each element
 	/*----------------------------------------------------*/
@@ -505,14 +400,6 @@
     initItem: "#poseidon-1",
   });
 
-  // winObj.on("load", function () {
-  //   var $preloader = $(".loader-wrapper");
-
-  //   $preloader.hide();
-  //   $preloader.find(".cssload-loader").fadeOut();
-  //   $preloader.delay(500).fadeOut("slow");
-  // });
-
   $(window).on("load", function () {
     const height = $("#home-video-bg").height();
     $(".main-slider").height(height);
@@ -523,141 +410,4 @@
     });
   });
 
-  /*----------------------------------------------------*/
-  /* Calendar Settings
-	/*----------------------------------------------------*/
-
-  var calendarBl = $(".calendar-bl");
-  if (calendarBl.length) {
-    calendarBl.dateRangePicker({
-      inline: true,
-      container: ".calendar-container",
-      alwaysOpen: true,
-      singleDate: true,
-      singleMonth: true,
-      showTopbar: false,
-      customArrowPrevSymbol: '<i class="fa fa-angle-left fsize-14"></i>',
-      customArrowNextSymbol: '<i class="fa fa-angle-right fsize-14"></i>',
-    });
-  }
-
-  /*----------------------------------------------------*/
-  /*	Google maps
-	/*----------------------------------------------------*/
-  if ($("#map").length) {
-    function initialize() {
-      var mapOptions = {
-        center: {
-          lat: 40.7143528,
-          lng: -74.0059731,
-        },
-        zoom: 15,
-        styles: [
-          { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
-          {
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#242f3e" }],
-          },
-          { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
-          {
-            featureType: "administrative.locality",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-          },
-          {
-            featureType: "poi",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [{ color: "#263c3f" }],
-          },
-          {
-            featureType: "poi.park",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#6b9a76" }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry",
-            stylers: [{ color: "#38414e" }],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#212a37" }],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#9ca5b3" }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry",
-            stylers: [{ color: "#746855" }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#1f2835" }],
-          },
-          {
-            featureType: "road.highway",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#f3d19c" }],
-          },
-          {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [{ color: "#2f3948" }],
-          },
-          {
-            featureType: "transit.station",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#d59563" }],
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#17263c" }],
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#515c6d" }],
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#17263c" }],
-          },
-        ],
-        disableDefaultUI: true,
-        scrollwheel: false,
-        draggable: true,
-      };
-
-      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-      // Create marker
-      var marker = new google.maps.Marker({
-        position: {
-          lat: 40.7143528,
-          lng: -74.0059731,
-        },
-        map: map,
-        title: "INDIEGA",
-        animation: google.maps.Animation.DROP,
-        icon: "../assets/images/marker.png",
-      });
-
-      // Marker animation
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-
-    google.maps.event.addDomListener(window, "load", initialize);
-  }
 })(jQuery);
