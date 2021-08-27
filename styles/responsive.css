@@ -327,6 +327,10 @@
     height: 60px;
     padding: 0 30px;
   }
+
+  #game-cards li {
+    padding-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
