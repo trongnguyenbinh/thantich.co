@@ -1483,7 +1483,7 @@ body.no-scroll {
   display: none !important;
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
@@ -1499,6 +1499,16 @@ body.no-scroll {
 /* ==========================================================================
    02. HEADER STYLES
    ========================================================================== */
+#introduce-section .container .row .logo-intro {
+  display: block;
+  text-align: center;
+
+}
+
+#introduce-section .container .row .logo-intro img {
+  width: 400px;
+}
+
 .header-line-wrapper {
   position: absolute;
   width: 100%;
